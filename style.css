@@ -1,0 +1,103 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  height: 100%;
+  background: linear-gradient(135deg, #1a1a2e, #0f0f1e);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #eee;
+}
+
+.container {
+  position: relative;
+  width: 400px;
+  height: 500px;
+  background: #222;
+  border-radius: 12px;
+  box-shadow: 0 0 20px #6a0dadaa;
+  padding: 20px;
+  text-align: center;
+}
+
+.gothgirl {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.face {
+  position: relative;
+  width: 250px;
+  height: 300px;
+  margin: 0 auto 20px auto;
+  background: #444;
+  border-radius: 50% / 60%;
+  overflow: visible;
+}
+
+.face img {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.eye {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: white;
+  border-radius: 50%;
+  top: 90px;
+  overflow: hidden;
+}
+
+.left-eye {
+  left: 60px;
+}
+
+.right-eye {
+  right: 60px;
+}
+
+.pupil {
+  width: 20px;
+  height: 20px;
+  background: black;
+  border-radius: 50%;
+  position: relative;
+  top: 10px;
+  left: 10px;
+  transition: top 0.1s, left 0.1s;
+}
+
+#mouth-img {
+  position: absolute;
+  width: 80px;
+  height: 40px;
+  bottom: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.contract-address {
+  background: #6a0dad;
+  padding: 12px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  user-select: none;
+  font-weight: bold;
+  font-family: 'Courier New', Courier, monospace;
+  box-shadow: 0 0 15px #6a0dadcc;
+  transition: box-shadow 0.3s ease;
+}
+
+.contract-address:hover {
+  box-shadow: 0 0 30px #bb6affcc;
+}
