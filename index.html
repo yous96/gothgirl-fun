@@ -7,7 +7,7 @@
     body {
       margin: 0;
       padding: 0;
-      background-color: #D3D3D3; /* Bright Gray */
+      background-color: #D3D3D3;
       font-family: Arial, sans-serif;
     }
 
@@ -17,34 +17,57 @@
       padding-top: 100px;
     }
 
-    #gothGirl {
-      display: block;
-      margin: 0 auto;
-      width: 500px; /* Bigger image */
+    .girl-wrapper {
       position: relative;
+      width: 500px;
+      margin: 0 auto;
+    }
+
+    .girl-image {
+      width: 500px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    #boredGirl {
+      z-index: 1;
+      opacity: 1;
+    }
+
+    #smileGirl {
       z-index: 2;
+      opacity: 0;
+    }
+
+    .girl-wrapper:hover #smileGirl,
+    .girl-wrapper:hover ~ .wallet-sign:hover ~ #smileGirl,
+    .wallet-sign:hover ~ .girl-wrapper #smileGirl {
+      opacity: 1;
+    }
+
+    .girl-wrapper:hover #boredGirl,
+    .wallet-sign:hover ~ .girl-wrapper #boredGirl {
+      opacity: 0;
     }
 
     .wallet-sign {
-position: absolute;
-  bottom: 130px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: transparent;
-  color: #000;
-  font-family: 'Cinzel', serif;
-  font-size: 26px;
-  user-select: text;
-  pointer-events: auto;
-  font-weight: bold;
-  box-shadow: none;
-  text-shadow: none;
-  padding: 0;
-  border-radius: 0;
-  white-space: normal;
-  text-align: center;
-  max-width: 350px; /* made wider to reduce line breaks */
-  word-break: break-word; /* safer break */
+      position: absolute;
+      top: 320px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: transparent;
+      color: #000;
+      font-family: 'Cinzel', serif;
+      font-size: 28px;
+      user-select: text;
+      pointer-events: auto;
+      font-weight: bold;
+      text-align: center;
+      max-width: 400px;
+      word-break: break-word;
+      z-index: 3;
     }
 
     .main-card {
@@ -52,7 +75,7 @@ position: absolute;
       border: 4px solid #000;
       border-radius: 24px;
       max-width: 900px;
-      margin: 100px auto 0 auto;
+      margin: 120px auto 0 auto;
       padding: 60px 40px;
       box-shadow: 0 0 20px rgba(0,0,0,0.15);
       z-index: 1;
@@ -77,13 +100,17 @@ position: absolute;
 <body>
 
   <div class="main-container">
-    <!-- Goth Girl Image -->
-    <img id="gothGirl" src="girl-smile.png" alt="Goth Girl" />
+    
+    <!-- GOTH GIRL IMAGE WRAPPER -->
+    <div class="girl-wrapper">
+      <img id="boredGirl" class="girl-image" src="girl-bored.png" alt="Bored Goth Girl" />
+      <img id="smileGirl" class="girl-image" src="girl-smile.png" alt="Smiling Goth Girl" />
+    </div>
 
-    <!-- Wallet Address on the Sign -->
+    <!-- WALLET ADDRESS -->
     <div class="wallet-sign">C9B1NkL3yX3Uwm5HgkZxV3p6Do89McgvZqzqzDkgXu6P</div>
 
-    <!-- Bordered Intro Card -->
+    <!-- INTRO CARD -->
     <div class="main-card">
       <section class="intro-section">
         <h2>Customize Your Own Gothic Girl</h2>
@@ -93,6 +120,7 @@ position: absolute;
         </p>
       </section>
     </div>
+
   </div>
 
 </body>
