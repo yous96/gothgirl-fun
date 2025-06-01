@@ -61,19 +61,21 @@
     </div>
   </div>
 
-  <script>
-    const girl = document.getElementById('gothGirl');
-    const boredSrc = 'girl-bored.png';
-    const smileSrc = 'girl-smile.png';
+ <script>
+  const girl = document.getElementById('gothGirl');
+  const container = document.getElementById('girlContainer');
+  const boredSrc = 'girl-bored.png';
+  const smileSrc = 'girl-smile.png';
 
-    girl.addEventListener('mouseenter', () => {
-      girl.src = smileSrc;
-    });
+  container.addEventListener('mouseenter', () => {
+    girl.src = smileSrc;
+  });
 
-    girl.addEventListener('mouseleave', () => {
-      girl.src = boredSrc;
-    });
-  </script>
+  container.addEventListener('mouseleave', () => {
+    girl.src = boredSrc;
+  });
+</script>
+
 
 </body>
 </html>
