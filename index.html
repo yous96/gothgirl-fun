@@ -20,6 +20,7 @@
     .girl-wrapper {
       position: relative;
       width: 500px;
+      height: 600px; /* ensure space for girl */
       margin: 0 auto;
     }
 
@@ -42,7 +43,6 @@
     }
 
     .girl-wrapper:hover #smileGirl,
-    .girl-wrapper:hover ~ .wallet-sign:hover ~ #smileGirl,
     .wallet-sign:hover ~ .girl-wrapper #smileGirl {
       opacity: 1;
     }
@@ -54,7 +54,7 @@
 
     .wallet-sign {
       position: absolute;
-      top: 320px;
+      top: 420px; /* moved DOWN from face to the hand area */
       left: 50%;
       transform: translateX(-50%);
       background: transparent;
@@ -75,7 +75,7 @@
       border: 4px solid #000;
       border-radius: 24px;
       max-width: 900px;
-      margin: 120px auto 0 auto;
+      margin: 50px auto 0 auto; /* pushed DOWN to not overlap the girl */
       padding: 60px 40px;
       box-shadow: 0 0 20px rgba(0,0,0,0.15);
       z-index: 1;
@@ -105,10 +105,10 @@
     <div class="girl-wrapper">
       <img id="boredGirl" class="girl-image" src="girl-bored.png" alt="Bored Goth Girl" />
       <img id="smileGirl" class="girl-image" src="girl-smile.png" alt="Smiling Goth Girl" />
-    </div>
 
-    <!-- WALLET ADDRESS -->
-    <div class="wallet-sign">C9B1NkL3yX3Uwm5HgkZxV3p6Do89McgvZqzqzDkgXu6P</div>
+      <!-- WALLET ADDRESS on Sign -->
+      <div class="wallet-sign">C9B1NkL3yX3Uwm5HgkZxV3p6Do89McgvZqzqzDkgXu6P</div>
+    </div>
 
     <!-- INTRO CARD -->
     <div class="main-card">
