@@ -1,88 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Goth Girl Wallet Overlay</title>
-<style>
-  body {
-    margin: 0;
-    background-color: #2b1b3a; /* dark purple background */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
-  .goth-girl-container {
-    position: relative;
-    width: 300px; /* adjust as needed */
-    cursor: pointer;
-  }
-  .goth-girl-container img {
-    width: 100%;
-    display: block;
-    transition: opacity 0.3s ease;
-  }
-  .goth-girl-container img.smile {
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-  }
-  .goth-girl-container:hover img.smile {
-    opacity: 1;
-  }
-  .goth-girl-container:hover img.normal {
-    opacity: 0;
-  }
-  /* Wallet overlay */
-  .wallet-overlay {
-    position: absolute;
-    top: 65%; /* adjust vertical position */
-    left: 50%; /* adjust horizontal position */
-    transform: translate(-50%, -50%);
-    background: rgba(0,0,0,0.6);
-    color: #e0d7ff;
-    font-size: 14px;
-    font-weight: bold;
-    padding: 6px 12px;
-    border-radius: 6px;
-    user-select: text; /* make text selectable */
-    white-space: nowrap;
-    font-family: monospace;
-    letter-spacing: 1px;
-  }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Goth Girl Customization</title>
+  <style>
+    body {
+      background-color: #D3D3D3;
+      color: #222;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .container {
+      position: relative;
+      width: 400px;
+    }
+    .goth-girl {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 8px;
+      transition: opacity 0.3s ease;
+      cursor: pointer;
+    }
+    .wallet-sign {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(0,0,0,0.7);
+      color: #fff;
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-weight: bold;
+      font-family: monospace;
+      user-select: none;
+      pointer-events: none; /* so click passes through */
+    }
+  </style>
 </head>
 <body>
 
-<div class="goth-girl-container" tabindex="0" aria-label="Customizable goth girl with wallet address">
-  <img src="girl-bored.png" alt="Goth girl normal expression" class="normal" />
-  <img src="girl-smile.png" alt="Goth girl smiling expression" class="smile" />
-  <div class="wallet-overlay" title="Click to copy wallet address" onclick="copyWallet()" role="button" tabindex="0">
-    0xAbC1234Ef5678Gh9012IjKlmNop345QrStu67890
+  <div class="container">
+    <img src="girl-smile.png" alt="Goth Girl Smile" class="goth-girl" id="gothGirl" />
+    <div class="wallet-sign">Wallet: 0x1234...ABCD</div>
   </div>
-</div>
 
-<script>
-  function copyWallet() {
-    const walletText = document.querySelector('.wallet-overlay').textContent;
-    navigator.clipboard.writeText(walletText).then(() => {
-      alert('Wallet address copied!');
-    }, () => {
-      alert('Failed to copy wallet address.');
+  <script>
+    const girl = document.getElementById('gothGirl');
+    const smileSrc = 'girl-smile.png';
+    const boredSrc = 'girl-bored.png';
+
+    girl.addEventListener('mouseenter', () => {
+      girl.src = boredSrc;
     });
-  }
 
-  // Allow keyboard copy with Enter or Space
-  document.querySelector('.wallet-overlay').addEventListener('keydown', e => {
-    if(e.key === 'Enter' || e.key === ' ') {
-      e.preventDefault();
-      copyWallet();
-    }
-  });
-</script>
+    girl.addEventListener('mouseleave', () => {
+      girl.src = smileSrc;
+    });
+  </script>
 
 </body>
 </html>
