@@ -34,14 +34,14 @@
     }
 
     .wallet-sign {
-    position: absolute;
-  bottom: 150px; /* moved down from 180px */
+position: absolute;
+  bottom: 140px; /* moved down slightly */
   left: 50%;
   transform: translateX(-50%);
   background: transparent;
   color: #000;
   font-family: 'Cinzel', serif;
-  font-size: 22px; /* increased size */
+  font-size: 20px; /* increased from 18px */
   user-select: text;
   pointer-events: auto;
   font-weight: bold;
@@ -49,8 +49,10 @@
   text-shadow: none;
   padding: 0;
   border-radius: 0;
-  white-space: nowrap; /* force one line */
+  white-space: normal; /* allow multiple lines */
   text-align: center;
+  max-width: 250px;
+  word-break: break-all;
 }
   </style>
 </head>
