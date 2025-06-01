@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<link href="https://fonts.googleapis.com/css2?family=Fira+Mono&family=Special+Elite&display=swap" rel="stylesheet">
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -44,21 +45,23 @@
 
     .wallet-overlay {
       position: absolute;
-  top: 70%; /* move it lower until it fits the sign */
+  top: 69%; /* adjust until it's perfectly centered in the sign */
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #fff; /* or match the "ink" color of the sign */
-  font-size: 18px;
+  color: #111; /* black text to match a light sign */
+  font-size: 16px;
   font-weight: 600;
-  font-family: monospace;
-  white-space: nowrap;
+  font-family: 'Special Elite', 'Fira Mono', monospace;
+  white-space: normal;
+  word-break: break-word;
+  text-align: center;
   user-select: text;
   pointer-events: auto;
   background: none;
   padding: 0;
   border: none;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.6); /* subtle for better blending */
-}
+  line-height: 1.4;
+  text-shadow: none; /* clean printed look */
   </style>
 </head>
 <body>
