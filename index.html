@@ -2,71 +2,18 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Goth Girl Wallet Hover</title>
-  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+  <title>Image Test</title>
   <style>
     body {
-      margin: 0;
-      padding: 0;
-      background-color: #1a001f; /* dark purple */
+      background: #1a001f;
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
     }
-
-    .hero-image-container {
-      position: relative;
-      width: fit-content;
-    }
-
-    .girl {
-      position: absolute;
-      top: 0;
-      left: 0;
-      transition: opacity 0.3s ease;
-      height: auto;
-      width: 100%;
-    }
-
-    .girl.hover {
-      opacity: 0;
-      pointer-events: none;
-    }
-
-    .hero-image-container:hover .girl.hover {
-      opacity: 1;
-    }
-
-    .hero-image-container:hover .girl.normal {
-      opacity: 0;
-    }
-
-    .wallet-overlay {
-      position: absolute;
-      top: 73%; /* Adjust vertically to match sign */
-      left: 50%;
-      transform: translateX(-50%);
-      width: 280px; /* Adjust to fit sign area */
-      color: #111;
-      font-family: 'Special Elite', monospace;
-      font-weight: 600;
-      font-size: 14px;
-      text-align: center;
-      user-select: text;
-      white-space: normal;
-      word-break: break-word;
-    }
   </style>
 </head>
 <body>
-  <div class="hero-image-container">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/4/47/PNG_transparency_demonstration_1.png" class="girl normal" />
-    <img src="girl-smile.png" class="girl hover" alt="Goth Girl Smiling" />
-    <div class="wallet-overlay">
-      0xF1a7bEEfA32A94A46Bc12cd9Aa3aFADE12345678
-    </div>
-  </div>
+  <img src="girl-bored.png" alt="test" style="width: 300px;" />
 </body>
 </html>
