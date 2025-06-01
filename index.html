@@ -44,26 +44,28 @@
     }
 
     .wallet-overlay {
-  .wallet-overlay {
   position: absolute;
   top: 69%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 220px;         /* fixed width to fit sign */
+  user-select: text;
+  pointer-events: auto;
+  background: none;
+  padding: 0;
+  border: none;
+  text-align: center;    /* center lines */
+}
+
+.wallet-text {
   color: #111;
   font-size: 14px;
   font-weight: 700;
   font-family: 'Special Elite', 'Fira Mono', monospace;
   white-space: normal;
   word-break: break-word;
-  max-width: 240px;
-  text-align: center;
-  user-select: text;
-  pointer-events: auto;
-  background: none;
-  padding: 0;
-  border: none;
-  line-height: 1.4;
-  text-shadow: none;
+  line-height: 1.3;
+
 }
   </style>
 </head>
@@ -73,7 +75,7 @@
     <img src="goth-girl-normal.png" alt="Goth girl normal" class="normal" />
     <img src="goth-girl-smile.png" alt="Goth girl smile" class="smile" />
     <div class="wallet-overlay" title="Click to copy full wallet" onclick="copyWallet()" role="button" tabindex="0">
-      0xAbC12&#8203;34Ef56&#8203;78Gh90&#8203;12IjKl&#8203;mNop3&#8203;45Qrs&#8203;Tu67&#8203;890
+      <span class="wallet-text">0xAbC1234Ef5678Gh9012IjKlmNop345QrStu67890</span>
     </div>
   </div>
 
