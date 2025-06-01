@@ -17,7 +17,8 @@
     }
     .container {
       position: relative;
-      width: 600px; /* increased size */
+      width: 600px;
+      user-select: none; /* prevent selecting image */
     }
     .goth-girl {
       width: 100%;
@@ -26,10 +27,11 @@
       border-radius: 8px;
       transition: opacity 0.3s ease;
       cursor: pointer;
+      user-select: none; /* prevent selecting image */
     }
     .wallet-sign {
       position: absolute;
-      bottom: 100px; /* move up from bottom */
+      bottom: 100px;
       left: 50%;
       transform: translateX(-50%);
       background: rgba(0,0,0,0.7);
@@ -38,31 +40,36 @@
       border-radius: 25px;
       font-weight: bold;
       font-family: monospace;
-      user-select: none;
-      pointer-events: none;
       white-space: nowrap;
       font-size: 18px;
+      user-select: text; /* allow text selection */
+      pointer-events: auto; /* allow interaction */
+      display: flex;
+      align-items: center; /* vertical center */
+      justify-content: center; /* horizontal center */
+      height: 40px; /* fixed height to help vertical centering */
+      box-sizing: border-box;
     }
   </style>
 </head>
 <body>
 
   <div class="container">
-    <img src="girl-smile.png" alt="Goth Girl Smile" class="goth-girl" id="gothGirl" />
-    <div class="wallet-sign">Wallet: 0x1234...ABCD</div>
+    <img src="girl-bored.png" alt="Goth Girl Bored" class="goth-girl" id="gothGirl" />
+    <div class="wallet-sign" title="Click and drag to copy">Wallet: 0x1234...ABCD</div>
   </div>
 
   <script>
     const girl = document.getElementById('gothGirl');
-    const smileSrc = 'girl-smile.png';
     const boredSrc = 'girl-bored.png';
+    const smileSrc = 'girl-smile.png';
 
     girl.addEventListener('mouseenter', () => {
-      girl.src = boredSrc;
+      girl.src = smileSrc;
     });
 
     girl.addEventListener('mouseleave', () => {
-      girl.src = smileSrc;
+      girl.src = boredSrc;
     });
   </script>
 
