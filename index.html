@@ -15,16 +15,16 @@
       position: relative;
       text-align: center;
       padding-top: 100px;
-      padding-bottom: 100px; /* added bottom padding so nothing overlaps */
+      padding-bottom: 100px;
       z-index: 0;
     }
 
     .girl-wrapper {
       position: relative;
       width: 500px;
-      height: 600px; /* ensure space for girl */
+      height: 600px;
       margin: 0 auto;
-      z-index: 10; /* higher so it's always on top */
+      z-index: 10;
     }
 
     .girl-image {
@@ -57,23 +57,23 @@
 
     .wallet-sign {
       position: absolute;
-      top: 480px; /* moved 20px down from before */
+      top: 480px;
       left: 50%;
       transform: translateX(-50%);
       background: transparent;
       color: #000;
       font-family: 'Cinzel', serif;
-      font-size: 24px; /* increased size */
+      font-size: 24px;
       font-weight: bold;
       user-select: text;
       pointer-events: auto;
       text-align: center;
-      max-width: 550px; /* increased width */
+      max-width: 550px;
       white-space: normal;
       line-height: 1.2;
       word-break: break-word;
       z-index: 20;
-      border: none; /* just to be sure */
+      border: none;
       box-sizing: border-box;
     }
 
@@ -82,30 +82,50 @@
       border: 4px solid #000;
       border-radius: 24px;
       max-width: 900px;
-      margin: 60px auto 0 auto; /* enough margin to avoid overlap */
+      margin: 60px auto 0 auto;
       padding: 60px 40px;
       box-shadow: 0 0 20px rgba(0,0,0,0.15);
       position: relative;
       z-index: 1;
     }
 
-    .intro-section h2 {
+    .intro-section h2,
+    .features-section h2 {
       font-size: 32px;
       margin-bottom: 20px;
       font-family: 'Cinzel', serif;
       color: #111;
+      text-align: left;
+      padding: 0 20px;
     }
 
-    .intro-section p {
-  font-size: 22px;
-  font-family: 'Cinzel', serif;
-  line-height: 2;
-  color: #333;
-  margin-top: 40px;
-  margin-bottom: 40px;
-  text-align: left; /* makes it start from the left */
-  padding: 0 20px;
-}
+    .intro-section p,
+    .features-section p {
+      font-size: 22px;
+      font-family: 'Cinzel', serif;
+      line-height: 2;
+      color: #333;
+      margin-top: 30px;
+      margin-bottom: 40px;
+      text-align: left;
+      padding: 0 20px;
+    }
+
+    .preview-images {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      align-items: center;
+      margin-top: 60px;
+    }
+
+    .preview-images img {
+      width: 100%;
+      max-width: 800px;
+      border-radius: 16px;
+      border: 3px solid #000;
+      box-shadow: 0 0 12px rgba(0,0,0,0.2);
+    }
   </style>
 </head>
 <body>
@@ -122,12 +142,34 @@
     <div class="main-card">
       <section class="intro-section">
         <p>
-      Welcome to GothGirl.fun — a one-of-a-kind experience where creativity and gothic aesthetics collide. This project lets you customize your own goth girl character with detailed features that reflect your style, mood, and imagination. From facial expressions to eye color, skin tone, makeup, and accessories, every element is designed to be adjustable — making each character unique and personal.<br><br>
-      Our goal is to deliver a fun, interactive way to build dark, stylish avatars that feel alive on your screen. Whether you’re here for the aesthetic, the vibe, or just for fun, you’ll find that every option is crafted to match the spirit of goth culture while staying visually sleek and accessible.<br><br>
-      In the near future, we’re planning to introduce <strong>AI-powered animated models</strong> — bringing your goth girl to life with smooth expressions, subtle movements, and intelligent reactions. Whether on your phone or desktop, your avatar will be more than just an image — it’ll respond, emote, and evolve with your inputs and style.<br><br>
-      This is just the beginning. Join us as we continue building the ultimate gothic desktop companion — smart, stylish, and uniquely yours.
-    </p>
+          Welcome to GothGirl.fun — a one-of-a-kind experience where creativity and gothic aesthetics collide. This project lets you customize your own goth girl character with detailed features that reflect your style, mood, and imagination. From facial expressions to eye color, skin tone, makeup, and accessories, every element is designed to be adjustable — making each character unique and personal.<br><br>
+          Our goal is to deliver a fun, interactive way to build dark, stylish avatars that feel alive on your screen. Whether you’re here for the aesthetic, the vibe, or just for fun, you’ll find that every option is crafted to match the spirit of goth culture while staying visually sleek and accessible.<br><br>
+          In the near future, we’re planning to introduce <strong>AI-powered animated models</strong> — bringing your goth girl to life with smooth expressions, subtle movements, and intelligent reactions. Whether on your phone or desktop, your avatar will be more than just an image — it’ll respond, emote, and evolve with your inputs and style.<br><br>
+          This is just the beginning. Join us as we continue building the ultimate gothic desktop companion — smart, stylish, and uniquely yours.
+        </p>
       </section>
+
+      <section class="features-section">
+        <h2>Features & Customization</h2>
+        <p>
+          The heart of this project lies in its deep visual customization system. Our intuitive interface allows you to personalize your goth girl character with precise control over nearly every detail — offering a creative, hands-on experience.
+          <br><br>
+          You’ll explore customization panels dedicated to distinct features such as:
+          <strong>eyes, clothing, skin tone, makeup, hair style, facial expressions, accessories, background themes, body mods, and more.</strong>
+          Each section provides a range of detailed options — whether it’s adjusting iris size and color, adding gothic chokers, or selecting moody makeup styles.
+          <br><br>
+          These panels are designed to be sleek, scrollable, and icon-driven — giving you quick access to every trait that defines your unique aesthetic. And as we expand, you'll also see new panel types and assets added regularly to reflect community suggestions and trends in goth fashion.
+          <br><br>
+          In the near future, we’re also working on integrating <strong>animated goth avatars powered by AI</strong>. These characters will blink, emote, and react to your inputs in real-time — blurring the line between digital art and living desktop companions.
+          <br><br>
+          Below are two sample customization panels currently in development, showcasing the eyes and clothing categories.
+        </p>
+      </section>
+
+      <div class="preview-images">
+        <img src="eyes-panel.png" alt="Eyes Customization Panel">
+        <img src="clothing-panel.png" alt="Clothing Customization Panel">
+      </div>
     </div>
   </div>
 
