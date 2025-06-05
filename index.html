@@ -281,42 +281,6 @@
       opacity: 1;
       transform: translateY(0);
     }
-
-    /* Green glowing icons for footer */
-    .footer-icons {
-      font-size: 32px;
-      color: #9acd32;
-      font-family: 'Arial Black', Arial, sans-serif;
-      font-weight: bold;
-      user-select: none;
-      cursor: pointer;
-      transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 48px;
-      height: 48px;
-      margin: 0 10px;
-      border-radius: 8px;
-    }
-
-    .footer-icons:hover {
-      color: #b4ff47;
-      transform: scale(1.1);
-      text-shadow: 0 0 12px #b4ff47;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px 0;
-      margin-top: 60px;
-      border-top: 2px solid #444;
-      font-family: 'Cinzel', serif;
-      color: #aaa;
-      user-select: none;
-    }
-
   </style>
 </head>
 <body>
@@ -331,83 +295,94 @@
 
   <div class="main-container">
     <div class="girl-wrapper">
-      <img id="boredGirl" class="girl-image" src="https://i.ibb.co/W0VbLxN/boredgirl.png" alt="Bored Girl" />
-      <img id="smileGirl" class="girl-image" src="https://i.ibb.co/rmkXzP3/smilegirl.png" alt="Smile Girl" />
-      <div class="wallet-sign" id="walletSign" contenteditable spellcheck="false">
-        0x12ab...F94E
+      <img id="boredGirl" class="girl-image" src="girl-bored.png" alt="Bored Goth Girl" />
+      <img id="smileGirl" class="girl-image" src="girl-smile.png" alt="Smiling Goth Girl" />
+      <div class="wallet-sign">
+        C9B1NkL3yX3Uwm5HgkZxV3p6Do89McgvZqzqzDkgXu6P
       </div>
     </div>
 
-    <!-- Intro Section -->
-    <section id="intro" class="intro-section fade-slide-in">
-      <h2>Welcome to GothBuilt.fun</h2>
-      <p>
-        Customize your goth anime girl desktop wallpapers with unique style choices,
-        expressions, and cool glowing effects!
-      </p>
-      <div class="preview-images">
-        <img src="https://i.ibb.co/4mZr7HQ/customizer1.png" alt="Customizer Preview 1" />
-        <img src="https://i.ibb.co/8YhRbWh/customizer2.png" alt="Customizer Preview 2" />
+    <div class="main-card">
+      <section class="intro-section fade-slide-in" id="intro">
+        <p>
+          Welcome to GothBuilt.fun — a one-of-a-kind experience where creativity and gothic aesthetics collide. This project lets you customize your own goth girl character with detailed features that reflect your style, mood, and imagination. From facial expressions to eye color, skin tone, makeup, and accessories, every element is designed to be adjustable — making each character unique and personal.<br><br>
+          Our goal is to deliver a fun, interactive way to build dark, stylish avatars that feel alive on your screen. Whether you’re here for the aesthetic, the vibe, or just for fun, you’ll find that every option is crafted to match the spirit of goth culture while staying visually sleek and accessible.<br><br>
+          In the near future, we’re planning to introduce <strong>AI-powered animated models</strong> — bringing your goth girl to life with smooth expressions, subtle movements, and intelligent reactions. Whether on your phone or desktop, your avatar will be more than just an image — it’ll respond, emote, and evolve with your inputs and style.<br><br>
+          This is just the beginning. Join us as we continue building the ultimate gothic desktop companion — smart, stylish, and uniquely yours.
+        </p>
+      </section>
+
+      <section class="features-section fade-slide-in" id="features">
+        <h2>Features & Customization</h2>
+        <p>
+          The heart of this project lies in its deep visual customization system. Our intuitive interface allows you to personalize your goth girl character with precise control over nearly every detail — offering a creative, hands-on experience.
+          <br><br>
+          You’ll explore customization panels dedicated to distinct features such as:
+          <strong>eyes, clothing, skin tone, makeup, hair style, facial expressions, accessories, background themes, body mods, and more.</strong>
+          Each section provides a range of detailed options — whether it’s adjusting iris size and color, adding gothic chokers, or selecting moody makeup styles.
+          <br><br>
+          These panels are designed to be sleek, scrollable, and icon-driven — giving you quick access to every trait that defines your unique aesthetic. And as we expand, you'll also see new panel types and assets added regularly to reflect community suggestions and trends in goth fashion.
+          <br><br>
+          In the near future, we’re also working on integrating <strong>animated goth avatars powered by AI</strong>. These characters will blink, emote, and react to your inputs in real-time — blurring the line between digital art and living desktop companions.
+          <br><br>
+          Below are two sample customization panels currently in development, showcasing the eyes and clothing categories.
+        </p>
+      </section>
+
+      <div class="preview-images fade-slide-in">
+        <img src="eyes-panel.png" alt="Eyes Customization Panel" />
+        <img src="clothing-panel.png" alt="Clothing Customization Panel" />
       </div>
-      <img src="https://i.ibb.co/2jPPpZY/chibi-intro.png" alt="Chibi Intro" class="chibi-image chibi-intro" />
-    </section>
 
-    <!-- Features Section -->
-    <section id="features" class="features-section fade-slide-in">
-      <h2>Features</h2>
-      <p>
-        Select skin, eyes, makeup, and outfits. Watch the girl react when you hover!
-      </p>
-      <img src="https://i.ibb.co/Tm1w37z/chibi-features.png" alt="Chibi Features" class="chibi-image chibi-features" />
-    </section>
+      <section class="roadmap-section fade-slide-in" id="roadmap">
+        <h2>Roadmap</h2>
+        <p>
+          Phase 1: Project launch and initial avatar customization.<br>
+          Phase 2: Launch the $goth coin.<br>
+          Phase 3: Beta Version Deployment.<br>
+          Phase 4: Full Platform Launch.<br>
+          Phase 5: Release AI-powered animated goth avatars.<br>
+        </p>
+      </section>
+    </div>
 
-    <!-- Roadmap Section -->
-    <section id="roadmap" class="roadmap-section fade-slide-in">
-      <h2>Roadmap</h2>
-      <p>
-        We're planning new customization options and animated wallpaper support soon.
-      </p>
-      <img src="https://i.ibb.co/CBGRdV4/chibi-roadmap.png" alt="Chibi Roadmap" class="chibi-image chibi-roadmap" />
-    </section>
+    <!-- Chibi goth girls -->
+    <img src="chibiintro.png" class="chibi-image chibi-intro" alt="Chibi Intro" />
+    <img src="chibifeatures.png" class="chibi-image chibi-features" alt="Chibi Features" />
+    <img src="chibiroadmap.png" class="chibi-image chibi-roadmap" alt="Chibi Roadmap" />
   </div>
 
-  <!-- Footer -->
-  <footer>
-    <a href="#contactus" class="footer-icons" title="Close X">X</a>
-    <a href="#contactus" class="footer-icons" title="Telegram">📲</a>
-  </footer>
-
   <!-- Back to Top Button -->
-  <button id="backToTop" title="Back to Top">&#8679;</button>
+  <button id="backToTop" title="Back to Top">↑</button>
 
   <script>
-    // Hover toggle wallet sign text selection disable
-    const walletSign = document.getElementById('walletSign');
-    walletSign.addEventListener('mousedown', e => e.stopPropagation());
+    // Back to Top Button
+    const backToTopBtn = document.getElementById('backToTop');
 
-    // Scroll fade-in animation
-    const fadeElements = document.querySelectorAll('.fade-slide-in');
     window.addEventListener('scroll', () => {
-      fadeElements.forEach(el => {
-        const rect = el.getBoundingClientRect();
-        if(rect.top < window.innerHeight - 100) {
-          el.classList.add('visible');
-        }
-      });
-    });
-
-    // Back to Top button logic
-    const backToTop = document.getElementById('backToTop');
-    window.addEventListener('scroll', () => {
-      if(window.scrollY > 300) {
-        backToTop.style.display = 'flex';
+      if (window.scrollY > 300) {
+        backToTopBtn.style.display = 'flex';
       } else {
-        backToTop.style.display = 'none';
+        backToTopBtn.style.display = 'none';
       }
     });
-    backToTop.addEventListener('click', () => {
+
+    backToTopBtn.addEventListener('click', () => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
+
+    // Scroll animations
+    const fadeElements = document.querySelectorAll('.fade-slide-in');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.3 });
+
+    fadeElements.forEach(el => observer.observe(el));
   </script>
 
 </body>
