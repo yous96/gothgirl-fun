@@ -9,49 +9,39 @@
       padding: 0;
       background-color: #D3D3D3;
       font-family: Arial, sans-serif;
-      padding-top: 70px; /* for sticky nav */
+      padding-top: 65px; /* for sticky nav */
       scroll-behavior: smooth;
     }
 
-    /* Stylish Navigation Bar */
-   #site-nav {
-  position: fixed;
-  top: 10px; /* slightly below top to see rounded corners */
-  left: 50%;
-  transform: translateX(-50%);
-  width: 600px; /* adjust this width as you like */
-  background: linear-gradient(135deg, #000000, #222222);
-  color: #eee;
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  padding: 15px 30px;
-  font-family: 'Cinzel', serif;
-  z-index: 1000;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7);
-  border-radius: 25px; /* rounded corners */
-}
-
-    #site-nav:hover {
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.85);
+    /* Sticky Navigation */
+    #site-nav {
+      position: fixed;
+      top: 10px; left: 50%;
+      transform: translateX(-50%);
+      background: linear-gradient(145deg, #000000cc, #222222ee);
+      color: #eee;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 15px 40px;
+      font-family: 'Cinzel', serif;
+      z-index: 1000;
+      border-radius: 25px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.7);
+      max-width: 900px;
+      width: 90%;
+      backdrop-filter: saturate(180%) blur(8px);
     }
 
     #site-nav a {
       color: #eee;
       text-decoration: none;
-      font-size: 19px;
-      font-weight: 600;
-      padding: 6px 15px;
-      border-radius: 20px;
-      transition: background-color 0.3s, color 0.3s;
-      user-select: text;
+      font-size: 18px;
+      transition: color 0.3s;
     }
 
     #site-nav a:hover {
-      background-color: #9acd32;
-      color: #111;
-      cursor: pointer;
-      box-shadow: 0 0 8px #9acd32;
+      color: #9acd32;
     }
 
     .main-container {
@@ -193,7 +183,6 @@
     .chibi-roadmap {
       top: 4600px;
       left: 20px;
-      display: block; /* Make sure visible */
     }
 
     /* Back to Top Button */
@@ -201,36 +190,40 @@
       position: fixed;
       bottom: 40px;
       right: 40px;
-      background: #2e1a47;
+      background: linear-gradient(145deg, #000000cc, #222222ee);
       color: #eee;
       border: none;
-      border-radius: 50%;
+      border-radius: 25px;
       width: 50px;
       height: 50px;
       font-size: 26px;
       cursor: pointer;
       display: none;
       z-index: 1001;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-      transition: background-color 0.3s;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.7);
+      transition: background-color 0.3s, color 0.3s;
+      backdrop-filter: saturate(180%) blur(8px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      user-select: none;
+      line-height: 1;
     }
 
     #backToTop:hover {
       background-color: #9acd32;
-      color: #2e1a47;
+      color: #222222;
     }
 
     /* Responsive Design */
     @media (max-width: 768px) {
       #site-nav {
-        gap: 20px;
-        padding: 12px 25px;
-        width: 95%;
+        gap: 15px;
+        padding: 12px 0;
       }
 
       #site-nav a {
         font-size: 16px;
-        padding: 5px 10px;
       }
 
       .main-card {
@@ -262,26 +255,6 @@
         max-width: 100%;
         height: auto;
       }
-
-      .chibi-image {
-        width: 200px;
-        opacity: 0.85;
-      }
-
-      .chibi-intro {
-        top: 800px;
-        left: 10px;
-      }
-
-      .chibi-features {
-        top: 1600px;
-        right: 10px;
-      }
-
-      .chibi-roadmap {
-        top: 4200px;
-        left: 10px;
-      }
     }
 
     /* Scroll Animations */
@@ -299,12 +272,12 @@
 </head>
 <body>
 
-  <!-- Stylish Navigation Bar -->
+  <!-- Sticky Navigation -->
   <nav id="site-nav">
     <a href="#intro">Intro</a>
     <a href="#features">Features</a>
     <a href="#roadmap">Roadmap</a>
-    <a href="mailto:contact@gothbuilt.fun" target="_blank" rel="noopener noreferrer">Contact Us</a>
+    <a href="#contactus">Contact Us</a>
   </nav>
 
   <div class="main-container">
@@ -361,41 +334,42 @@
     </div>
 
     <!-- Chibi goth girls -->
-    <img src="chibiintro.png" class="chibi-image chibi-intro" alt="Chibi Goth Intro" />
-    <img src="chibifeatures.png" class="chibi-image chibi-features" alt="Chibi Goth Features" />
-    <img src="chibiroadmap.png" class="chibi-image chibi-roadmap" alt="Chibi Goth Roadmap" />
-
-    <!-- Back to top -->
-    <button id="backToTop" title="Back to Top">↑</button>
+    <img src="chibiintro.png" class="chibi-image chibi-intro" alt="Chibi Intro" />
+    <img src="chibifeatures.png" class="chibi-image chibi-features" alt="Chibi Features" />
+    <img src="chibiroadmap.png" class="chibi-image chibi-roadmap" alt="Chibi Roadmap" />
   </div>
 
+  <!-- Back to Top Button -->
+  <button id="backToTop" title="Back to Top">↑</button>
+
   <script>
-    // Back to top button logic
-    const backToTop = document.getElementById('backToTop');
+    // Back to Top Button
+    const backToTopBtn = document.getElementById('backToTop');
+
     window.addEventListener('scroll', () => {
       if (window.scrollY > 300) {
-        backToTop.style.display = 'block';
+        backToTopBtn.style.display = 'flex';
       } else {
-        backToTop.style.display = 'none';
+        backToTopBtn.style.display = 'none';
       }
     });
 
-    backToTop.addEventListener('click', () => {
+    backToTopBtn.addEventListener('click', () => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
     // Scroll animations
-    function revealOnScroll() {
-      const elements = document.querySelectorAll('.fade-slide-in');
-      elements.forEach(el => {
-        const rect = el.getBoundingClientRect();
-        if (rect.top < window.innerHeight - 50) {
-          el.classList.add('visible');
+    const fadeElements = document.querySelectorAll('.fade-slide-in');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
         }
       });
-    }
-    window.addEventListener('scroll', revealOnScroll);
-    window.addEventListener('load', revealOnScroll);
+    }, { threshold: 0.3 });
+
+    fadeElements.forEach(el => observer.observe(el));
   </script>
 
 </body>
