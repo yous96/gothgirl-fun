@@ -3,11 +3,6 @@
 <head>
   <meta charset="UTF-8" />
   <title>GothBuilt.fun Project</title>
-  <!-- Load Font Awesome for Telegram icon -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-  />
   <style>
     body {
       margin: 0;
@@ -18,7 +13,7 @@
       scroll-behavior: smooth;
     }
 
-  /* Stylish Navigation Bar */
+    /* Stylish Navigation Bar */
     #site-nav {
       position: fixed;
       top: 10px;
@@ -41,11 +36,11 @@
       transition: box-shadow 0.3s ease;
     }
 
-  #site-nav:hover {
+    #site-nav:hover {
       box-shadow: 0 12px 30px rgba(0, 0, 0, 0.85);
     }
 
-  #site-nav a {
+    #site-nav a {
       color: #eee;
       text-decoration: none;
       font-size: 19px;
@@ -56,12 +51,13 @@
       user-select: text;
     }
 
-   #site-nav a:hover {
+    #site-nav a:hover {
       background-color: #9acd32;
       color: #111;
       cursor: pointer;
       box-shadow: 0 0 8px #9acd32;
     }
+
     .main-container {
       position: relative;
       text-align: center;
@@ -287,162 +283,85 @@
       transform: translateY(0);
     }
 
-    /* Footer icon styles */
-    .x-icon,
-    .tele-icon {
-      transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
-      text-decoration: none;
-      cursor: pointer;
-    }
-
-    .x-icon {
-      font-weight: bold;
-      font-family: 'Arial Black', Arial, sans-serif;
-      font-size: 36px;
-      color: #9acd32;
-      user-select: none;
-    }
-
-    .tele-icon {
-      font-size: 36px;
-      color: #9acd32;
-      user-select: none;
-    }
-
-    .x-icon:hover,
-    .tele-icon:hover {
-      color: #b4ff47;
-      transform: scale(1.1);
-      text-shadow: 0 0 8px #b4ff47;
-    }
   </style>
 </head>
 <body>
 
-  <!-- Sticky Navigation -->
-  <nav id="site-nav">
-    <a href="#intro">Intro</a>
-    <a href="#features">Features</a>
-    <a href="#roadmap">Roadmap</a>
-    <a href="#contactus">Contact Us</a>
-  </nav>
+<nav id="site-nav" role="navigation" aria-label="Site Navigation">
+  <a href="#intro" tabindex="0">Intro</a>
+  <a href="#features" tabindex="0">Features</a>
+  <a href="#roadmap" tabindex="0">Roadmap</a>
+</nav>
 
-  <div class="main-container">
-    <div class="girl-wrapper">
-      <img
-        id="boredGirl"
-        class="girl-image"
-        src="https://i.ibb.co/h9J8PLZ/goth1.png"
-        alt="Goth Girl Bored"
-        draggable="false"
-      />
-      <img
-        id="smileGirl"
-        class="girl-image"
-        src="https://i.ibb.co/1sYdD8f/goth2.png"
-        alt="Goth Girl Smiling"
-        draggable="false"
-      />
-      <div
-        class="wallet-sign"
-        contenteditable="true"
-        spellcheck="false"
-        aria-label="Wallet Address"
-        role="textbox"
-        tabindex="0"
-      >
-        0x45aD5A2A59Daa5a01b8Af49ef8d1c8a73aa25e74
-      </div>
-    </div>
-
-    <div class="main-card" id="intro">
-      <h2>Intro</h2>
-      <p>
-        GothBuilt.fun is a fun, dark-themed website project dedicated to
-        customizing your goth anime girl desktop wallpapers with multiple UI
-        customization images. We include scroll animations and a roadmap of
-        future features to come.
-      </p>
-      <img
-        src="https://i.ibb.co/jDf6kGY/goth-ui1.png"
-        alt="Customization UI Preview"
-        class="preview-images"
-      />
-    </div>
-
-    <div class="main-card" id="features">
-      <h2>Features</h2>
-      <p>
-        Easily switch between eye styles, skin tones, and makeup options on the
-        goth anime girl. Hover on the girl to change her expression. Scroll
-        through sections smoothly with animated fades and slides.
-      </p>
-      <img
-        src="https://i.ibb.co/ZV1mPnP/goth-ui2.png"
-        alt="Features UI Preview"
-        class="preview-images"
-      />
-    </div>
-
-    <div class="main-card" id="roadmap">
-      <h2>Roadmap</h2>
-      <p>
-        Future plans include adding new goth girl poses, more detailed
-        customization, background scene choices, and dynamic wallet
-        integration for live crypto tipping.
-      </p>
-      <img
-        src="https://i.ibb.co/VHdTnkn/goth-ui3.png"
-        alt="Roadmap UI Preview"
-        class="preview-images"
-      />
+<main class="main-container">
+  <div class="girl-wrapper" aria-label="Goth girl image">
+    <img id="boredGirl" class="girl-image" src="girl-bored.png" alt="Bored Goth Girl" />
+    <img id="smileGirl" class="girl-image" src="girl-smile.png" alt="Smiling Goth Girl" />
+    <div class="wallet-sign" aria-label="Wallet Address" tabindex="0">
+      wallet address 0x69037462f3e403...
     </div>
   </div>
 
-  <!-- Footer with icons -->
-  <footer style="text-align: center; padding: 20px 0; border-top: 1px solid #444; background: #222;">
-    <p style="color: #aaa; margin-bottom: 10px;">© 2025 GothBuilt.fun</p>
-    <div style="font-size: 36px; display: inline-flex; gap: 30px; justify-content: center; align-items: center;">
-      <a href="#contactus" class="x-icon" aria-label="Go to Contact Section">X</a>
-      <a href="#contactus" class="tele-icon" aria-label="Go to Contact Section">
-        <i class="fab fa-telegram"></i>
-      </a>
+  <section id="intro" class="main-card intro-section fade-slide-in" tabindex="0" aria-labelledby="intro-title">
+    <h2 id="intro-title">Intro</h2>
+    <p>
+      GothBuilt.fun is a fun, fake coin marketing site project where you customize a goth anime girl for desktop wallpaper videos. It's all dark-themed and stylish!
+    </p>
+    <img src="chibiintro.png" class="chibi-image chibi-intro" alt="Chibi Intro" aria-hidden="true" />
+  </section>
+
+  <section id="features" class="main-card features-section fade-slide-in" tabindex="0" aria-labelledby="features-title">
+    <h2 id="features-title">Features</h2>
+    <p>
+      Customize eyes, skin, makeup, and clothing on the goth girl with simple UI panels shown below.
+    </p>
+    <div class="preview-images" aria-label="Customization panels preview">
+      <img src="eyes-panel.png" alt="Eyes Customization Panel" />
+      <img src="clothing-panel.png" alt="Clothing Customization Panel" />
+      <img src="chibifeatures.png" class="chibi-image chibi-features" alt="Chibi Features" aria-hidden="true" />
     </div>
-  </footer>
+  </section>
 
-  <!-- Back to Top Button -->
-  <button id="backToTop" aria-label="Back to top">&#8593;</button>
+  <section id="roadmap" class="main-card roadmap-section fade-slide-in" tabindex="0" aria-labelledby="roadmap-title">
+    <h2 id="roadmap-title">Roadmap</h2>
+    <p>
+      Coming soon: more goth anime girls, video customization options, and social media integration.
+    </p>
+    <img src="chibiroadmap.png" class="chibi-image chibi-roadmap" alt="Chibi Roadmap" aria-hidden="true" />
+  </section>
+</main>
 
-  <script>
-    // Scroll fade-in animations for main cards
-    const cards = document.querySelectorAll(".main-card");
-    const backToTop = document.getElementById("backToTop");
+<button id="backToTop" aria-label="Back to top" title="Back to top">↑</button>
 
-    function checkScroll() {
-      cards.forEach((card) => {
-        const rect = card.getBoundingClientRect();
-        if (rect.top < window.innerHeight - 100) {
-          card.classList.add("fade-slide-in", "visible");
-        }
-      });
-
-      if (window.scrollY > 300) {
-        backToTop.style.display = "flex";
-      } else {
-        backToTop.style.display = "none";
+<script>
+  // Scroll reveal effect
+  function onScrollFade() {
+    const fadeElements = document.querySelectorAll('.fade-slide-in');
+    fadeElements.forEach(el => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 100) {
+        el.classList.add('visible');
       }
+    });
+  }
+
+  window.addEventListener('scroll', onScrollFade);
+  window.addEventListener('load', onScrollFade);
+
+  // Back to top button
+  const backToTopBtn = document.getElementById('backToTop');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 600) {
+      backToTopBtn.style.display = 'flex';
+    } else {
+      backToTopBtn.style.display = 'none';
     }
+  });
 
-    window.addEventListener("scroll", checkScroll);
-    window.addEventListener("load", () => {
-      cards.forEach((card) => card.classList.add("fade-slide-in"));
-      checkScroll();
-    });
+  backToTopBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
 
-    // Back to top smooth scroll
-    backToTop.addEventListener("click", () => {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    });
-  </script>
 </body>
 </html>
