@@ -13,7 +13,7 @@
       scroll-behavior: smooth;
     }
 
-    /* Stylish Navigation Bar */
+  /* Stylish Navigation Bar */
     #site-nav {
       position: fixed;
       top: 10px;
@@ -36,11 +36,11 @@
       transition: box-shadow 0.3s ease;
     }
 
-    #site-nav:hover {
+  #site-nav:hover {
       box-shadow: 0 12px 30px rgba(0, 0, 0, 0.85);
     }
 
-    #site-nav a {
+  #site-nav a {
       color: #eee;
       text-decoration: none;
       font-size: 19px;
@@ -51,13 +51,12 @@
       user-select: text;
     }
 
-    #site-nav a:hover {
+   #site-nav a:hover {
       background-color: #9acd32;
       color: #111;
       cursor: pointer;
       box-shadow: 0 0 8px #9acd32;
     }
-
     .main-container {
       position: relative;
       text-align: center;
@@ -282,86 +281,148 @@
       opacity: 1;
       transform: translateY(0);
     }
+.x-icon {
+    font-weight: bold;
+    font-size: 32px;
+    color: #9acd32; /* Make it green */
+    font-family: 'Arial Black', Arial, sans-serif;
+    transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
+  }
+
+  .x-icon:hover {
+    color: #b4ff47;
+    transform: scale(1.1);
+    text-shadow: 0 0 8px #b4ff47;
+  }
+
+  .tele-icon {
+    font-size: 32px;
+    color: #9acd32;
+    transition: color 0.3s ease, transform 0.3s ease, text-shadow 0.3s ease;
+  }
+
+  .tele-icon:hover {
+    color: #b4ff47;
+    transform: scale(1.1);
+    text-shadow: 0 0 8px #b4ff47;
+  }
 
   </style>
 </head>
 <body>
 
-<nav id="site-nav" role="navigation" aria-label="Site Navigation">
-  <a href="#intro" tabindex="0">Intro</a>
-  <a href="#features" tabindex="0">Features</a>
-  <a href="#roadmap" tabindex="0">Roadmap</a>
-</nav>
+  <!-- Sticky Navigation -->
+  <nav id="site-nav">
+    <a href="#intro">Intro</a>
+    <a href="#features">Features</a>
+    <a href="#roadmap">Roadmap</a>
+    <a href="#contactus">Contact Us</a>
+  </nav>
 
-<main class="main-container">
-  <div class="girl-wrapper" aria-label="Goth girl image">
-    <img id="boredGirl" class="girl-image" src="girl-bored.png" alt="Bored Goth Girl" />
-    <img id="smileGirl" class="girl-image" src="girl-smile.png" alt="Smiling Goth Girl" />
-    <div class="wallet-sign" aria-label="Wallet Address" tabindex="0">
-      wallet address 0x69037462f3e403...
+  <div class="main-container">
+    <div class="girl-wrapper">
+      <img id="boredGirl" class="girl-image" src="girl-bored.png" alt="Bored Goth Girl" />
+      <img id="smileGirl" class="girl-image" src="girl-smile.png" alt="Smiling Goth Girl" />
+      <div class="wallet-sign">
+        C9B1NkL3yX3Uwm5HgkZxV3p6Do89McgvZqzqzDkgXu6P
+      </div>
     </div>
+
+    <div class="main-card">
+      <section class="intro-section fade-slide-in" id="intro">
+        <p>
+          Welcome to GothBuilt.fun — a one-of-a-kind experience where creativity and gothic aesthetics collide. This project lets you customize your own goth girl character with detailed features that reflect your style, mood, and imagination. From facial expressions to eye color, skin tone, makeup, and accessories, every element is designed to be adjustable — making each character unique and personal.<br><br>
+          Our goal is to deliver a fun, interactive way to build dark, stylish avatars that feel alive on your screen. Whether you’re here for the aesthetic, the vibe, or just for fun, you’ll find that every option is crafted to match the spirit of goth culture while staying visually sleek and accessible.<br><br>
+          In the near future, we’re planning to introduce <strong>AI-powered animated models</strong> — bringing your goth girl to life with smooth expressions, subtle movements, and intelligent reactions. Whether on your phone or desktop, your avatar will be more than just an image — it’ll respond, emote, and evolve with your inputs and style.<br><br>
+          This is just the beginning. Join us as we continue building the ultimate gothic desktop companion — smart, stylish, and uniquely yours.
+        </p>
+      </section>
+
+      <section class="features-section fade-slide-in" id="features">
+        <h2>Features & Customization</h2>
+        <p>
+          The heart of this project lies in its deep visual customization system. Our intuitive interface allows you to personalize your goth girl character with precise control over nearly every detail — offering a creative, hands-on experience.
+          <br><br>
+          You’ll explore customization panels dedicated to distinct features such as:
+          <strong>eyes, clothing, skin tone, makeup, hair style, facial expressions, accessories, background themes, body mods, and more.</strong>
+          Each section provides a range of detailed options — whether it’s adjusting iris size and color, adding gothic chokers, or selecting moody makeup styles.
+          <br><br>
+          These panels are designed to be sleek, scrollable, and icon-driven — giving you quick access to every trait that defines your unique aesthetic. And as we expand, you'll also see new panel types and assets added regularly to reflect community suggestions and trends in goth fashion.
+          <br><br>
+          In the near future, we’re also working on integrating <strong>animated goth avatars powered by AI</strong>. These characters will blink, emote, and react to your inputs in real-time — blurring the line between digital art and living desktop companions.
+          <br><br>
+          Below are two sample customization panels currently in development, showcasing the eyes and clothing categories.
+        </p>
+      </section>
+
+      <div class="preview-images fade-slide-in">
+        <img src="eyes-panel.png" alt="Eyes Customization Panel" />
+        <img src="clothing-panel.png" alt="Clothing Customization Panel" />
+      </div>
+
+      <section class="roadmap-section fade-slide-in" id="roadmap">
+        <h2>Roadmap</h2>
+        <p>
+          Phase 1: Project launch and initial avatar customization.<br>
+          Phase 2: Launch the $goth coin.<br>
+          Phase 3: Beta Version Deployment.<br>
+          Phase 4: Full Platform Launch.<br>
+          Phase 5: Release AI-powered animated goth avatars.<br>
+        </p>
+      </section>
+    </div>
+
+    <!-- Chibi goth girls -->
+    <img src="chibiintro.png" class="chibi-image chibi-intro" alt="Chibi Intro" />
+    <img src="chibifeatures.png" class="chibi-image chibi-features" alt="Chibi Features" />
+    <img src="chibiroadmap.png" class="chibi-image chibi-roadmap" alt="Chibi Roadmap" />
   </div>
 
-  <section id="intro" class="main-card intro-section fade-slide-in" tabindex="0" aria-labelledby="intro-title">
-    <h2 id="intro-title">Intro</h2>
-    <p>
-      GothBuilt.fun is a fun, fake coin marketing site project where you customize a goth anime girl for desktop wallpaper videos. It's all dark-themed and stylish!
-    </p>
-    <img src="chibiintro.png" class="chibi-image chibi-intro" alt="Chibi Intro" aria-hidden="true" />
-  </section>
+  <!-- Back to Top Button -->
+  <button id="backToTop" title="Back to Top">↑</button>
 
-  <section id="features" class="main-card features-section fade-slide-in" tabindex="0" aria-labelledby="features-title">
-    <h2 id="features-title">Features</h2>
-    <p>
-      Customize eyes, skin, makeup, and clothing on the goth girl with simple UI panels shown below.
-    </p>
-    <div class="preview-images" aria-label="Customization panels preview">
-      <img src="eyes-panel.png" alt="Eyes Customization Panel" />
-      <img src="clothing-panel.png" alt="Clothing Customization Panel" />
-      <img src="chibifeatures.png" class="chibi-image chibi-features" alt="Chibi Features" aria-hidden="true" />
-    </div>
-  </section>
+  <script>
+    // Back to Top Button
+    const backToTopBtn = document.getElementById('backToTop');
 
-  <section id="roadmap" class="main-card roadmap-section fade-slide-in" tabindex="0" aria-labelledby="roadmap-title">
-    <h2 id="roadmap-title">Roadmap</h2>
-    <p>
-      Coming soon: more goth anime girls, video customization options, and social media integration.
-    </p>
-    <img src="chibiroadmap.png" class="chibi-image chibi-roadmap" alt="Chibi Roadmap" aria-hidden="true" />
-  </section>
-</main>
-
-<button id="backToTop" aria-label="Back to top" title="Back to top">↑</button>
-
-<script>
-  // Scroll reveal effect
-  function onScrollFade() {
-    const fadeElements = document.querySelectorAll('.fade-slide-in');
-    fadeElements.forEach(el => {
-      const rect = el.getBoundingClientRect();
-      if (rect.top < window.innerHeight - 100) {
-        el.classList.add('visible');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backToTopBtn.style.display = 'flex';
+      } else {
+        backToTopBtn.style.display = 'none';
       }
     });
-  }
 
-  window.addEventListener('scroll', onScrollFade);
-  window.addEventListener('load', onScrollFade);
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
 
-  // Back to top button
-  const backToTopBtn = document.getElementById('backToTop');
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 600) {
-      backToTopBtn.style.display = 'flex';
-    } else {
-      backToTopBtn.style.display = 'none';
-    }
-  });
+    // Scroll animations
+    const fadeElements = document.querySelectorAll('.fade-slide-in');
 
-  backToTopBtn.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
-</script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.3 });
+
+    fadeElements.forEach(el => observer.observe(el));
+  </script>
+  
+<footer class="text-center py-4 mt-10 border-t border-gray-700">
+  <p class="text-sm text-gray-400">© 2025 GothBuilt.fun</p>
+  <div class="mt-2">
+    <a href="#contact" class="x-icon">X</a>
+    &nbsp;&nbsp;
+    <a href="#contact" class="tele-icon">
+      <i class="fa fa-telegram"></i>
+    </a>
+  </div>
+</footer>
+
+
 
 </body>
 </html>
