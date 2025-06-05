@@ -4,98 +4,64 @@
   <meta charset="UTF-8" />
   <title>GothBuilt.fun Project</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
-
     body {
       margin: 0;
       padding: 0;
-      background-color: #000000; /* BLACK background */
-      font-family: 'Cinzel', serif;
-      padding-top: 80px; /* for sticky nav */
+      background-color: #D3D3D3;
+      font-family: Arial, sans-serif;
+      padding-top: 65px; /* for sticky nav */
       scroll-behavior: smooth;
-      color: #eee;
-      overflow-x: hidden;
     }
 
-    /* Stylish Sticky Navigation */
+    /* Sticky Navigation */
     #site-nav {
       position: fixed;
-      top: 10px; left: 50%;
-      transform: translateX(-50%);
-      background: linear-gradient(135deg, #111111cc 0%, #222222cc 100%);
+      top: 0; left: 0; right: 0;
+      background: #2e1a47;
       color: #eee;
       display: flex;
       justify-content: center;
-      gap: 40px;
-      padding: 12px 40px;
+      gap: 30px;
+      padding: 15px 0;
       font-family: 'Cinzel', serif;
-      z-index: 10000;
-      border-radius: 40px;
-      box-shadow: 0 6px 15px rgba(0,0,0,0.9);
-      user-select: none;
-      backdrop-filter: saturate(180%) blur(12px);
+      z-index: 1000;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.7);
     }
 
     #site-nav a {
       color: #eee;
       text-decoration: none;
       font-size: 18px;
-      position: relative;
-      padding: 5px 0;
       transition: color 0.3s;
-    }
-
-    #site-nav a::after {
-      content: "";
-      position: absolute;
-      left: 0; bottom: 0;
-      width: 100%;
-      height: 2px;
-      background: #9acd32;
-      border-radius: 2px;
-      transform: scaleX(0);
-      transform-origin: right;
-      transition: transform 0.3s ease;
     }
 
     #site-nav a:hover {
       color: #9acd32;
     }
 
-    #site-nav a:hover::after {
-      transform: scaleX(1);
-      transform-origin: left;
-    }
-
-    /* Main container */
     .main-container {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 20px;
       position: relative;
+      text-align: center;
+      padding-top: 100px;
+      padding-bottom: 100px;
       z-index: 0;
     }
 
-    /* Girl wrapper - relative for stacking images */
     .girl-wrapper {
       position: relative;
       width: 500px;
       height: 600px;
-      margin: 0 auto 80px auto;
-      user-select: none;
+      margin: 0 auto;
       z-index: 10;
     }
 
-    /* Images stacked */
     .girl-image {
-      width: 100%;
+      width: 500px;
       position: absolute;
       top: 0;
       left: 0;
       transition: opacity 0.3s ease;
       user-select: none;
-      border-radius: 12px;
-      box-shadow: 0 0 20px #222;
     }
 
     #boredGirl {
@@ -108,74 +74,70 @@
       opacity: 0;
     }
 
-    /* On hover swap images */
-    .girl-wrapper:hover #smileGirl {
-      opacity: 1;
+    .girl-wrapper:hover #smileGirl,
+    .wallet-sign:hover {
+      opacity: 1 !important;
     }
 
     .girl-wrapper:hover #boredGirl {
       opacity: 0;
     }
 
-    /* Wallet sign above images */
     .wallet-sign {
       position: absolute;
-      bottom: 20px;
+      top: 480px;
       left: 50%;
       transform: translateX(-50%);
-      background: rgba(0, 0, 0, 0.75);
-      color: #9acd32;
+      background: transparent;
+      color: #000;
       font-family: 'Cinzel', serif;
       font-size: 24px;
       font-weight: bold;
-      padding: 8px 16px;
-      border-radius: 20px;
       user-select: text;
       pointer-events: auto;
-      z-index: 20;
-      box-shadow: 0 0 12px #9acd32;
-      max-width: 90%;
       text-align: center;
+      max-width: 550px;
+      white-space: normal;
+      line-height: 1.2;
       word-break: break-word;
+      z-index: 20;
+      border: none;
+      box-sizing: border-box;
     }
 
-    /* Main cards */
     .main-card {
-      background-color: #111;
-      border: 3px solid #222;
+      background-color: #f4f4f4;
+      border: 4px solid #000;
       border-radius: 24px;
       max-width: 900px;
-      margin: 60px auto;
-      padding: 40px 40px 60px 40px;
-      box-shadow: 0 0 30px #111;
+      margin: 60px auto 0 auto;
+      padding: 60px 40px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.15);
       position: relative;
-      color: #ccc;
-      text-align: right; /* Align right as requested */
+      z-index: 1;
+      text-align: left;
     }
 
-    .main-card h2 {
-      font-size: 36px;
-      margin-bottom: 24px;
-      color: #9acd32;
-    }
-
-    .main-card p {
-      font-size: 20px;
-      line-height: 1.7;
-      margin-top: 0;
+    .intro-section h2,
+    .features-section h2,
+    .roadmap-section h2 {
+      font-size: 32px;
       margin-bottom: 20px;
-      color: #ccc;
+      font-family: 'Cinzel', serif;
+      color: #111;
+      padding: 0 20px;
     }
 
-    .main-card ul {
-      color: #9acd32;
-      margin-left: 0;
-      padding-left: 20px;
-      text-align: right;
-    }
-
-    .main-card ul li {
-      margin-bottom: 10px;
+    .intro-section p,
+    .features-section p,
+    .roadmap-section p {
+      font-size: 22px;
+      font-family: 'Cinzel', serif;
+      line-height: 2;
+      color: #333;
+      margin-top: 30px;
+      margin-bottom: 40px;
+      padding: 0 20px;
     }
 
     .preview-images {
@@ -183,16 +145,39 @@
       flex-direction: column;
       gap: 40px;
       align-items: center;
-      margin-top: 40px;
-      margin-bottom: 20px;
+      margin-top: 60px;
+      margin-bottom: 60px;
     }
 
     .preview-images img {
       width: 100%;
       max-width: 800px;
       border-radius: 16px;
-      border: 3px solid #444;
-      box-shadow: 0 0 15px #333;
+      border: 3px solid #000;
+      box-shadow: 0 0 12px rgba(0,0,0,0.2);
+    }
+
+    .chibi-image {
+      position: absolute;
+      width: 300px;
+      z-index: 0;
+      opacity: 0.95;
+      pointer-events: none;
+    }
+
+    .chibi-intro {
+      top: 850px;
+      left: 20px;
+    }
+
+    .chibi-features {
+      top: 1700px;
+      right: 20px;
+    }
+
+    .chibi-roadmap {
+      top: 4600px;
+      left: 20px;
     }
 
     /* Back to Top Button */
@@ -200,8 +185,8 @@
       position: fixed;
       bottom: 40px;
       right: 40px;
-      background: #111;
-      color: #9acd32;
+      background: #2e1a47;
+      color: #eee;
       border: none;
       border-radius: 50%;
       width: 50px;
@@ -210,23 +195,20 @@
       cursor: pointer;
       display: none;
       z-index: 1001;
-      box-shadow: 0 4px 8px #000;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
       transition: background-color 0.3s;
     }
 
     #backToTop:hover {
       background-color: #9acd32;
-      color: #000;
+      color: #2e1a47;
     }
 
     /* Responsive Design */
     @media (max-width: 768px) {
       #site-nav {
-        gap: 20px;
-        padding: 10px 20px;
-        font-size: 16px;
-        border-radius: 30px;
-        top: 10px;
+        gap: 15px;
+        padding: 12px 0;
       }
 
       #site-nav a {
@@ -234,9 +216,8 @@
       }
 
       .main-card {
-        padding: 30px 20px;
-        margin: 40px 15px;
-        text-align: left; /* left align on mobile */
+        padding: 40px 20px;
+        margin: 40px 15px 0 15px;
       }
 
       .girl-wrapper {
@@ -246,20 +227,17 @@
 
       .girl-image {
         width: 100%;
-        position: relative;
         height: auto;
+        position: relative;
       }
 
       .wallet-sign {
-        position: relative;
-        bottom: auto;
+        font-size: 18px;
+        top: auto;
         left: 50%;
+        position: relative;
         transform: translateX(-50%);
         margin-top: 15px;
-        color: #9acd32;
-        background: transparent;
-        box-shadow: none;
-        font-size: 18px;
       }
 
       .preview-images img {
@@ -283,16 +261,15 @@
 </head>
 <body>
 
-  <!-- Stylish Sticky Navigation -->
+  <!-- Sticky Navigation -->
   <nav id="site-nav">
     <a href="#intro">Intro</a>
     <a href="#features">Features</a>
     <a href="#roadmap">Roadmap</a>
-    <a href="#contact">Contact Us</a>
   </nav>
 
   <div class="main-container">
-    <div class="girl-wrapper" title="Hover me to see a smile!">
+    <div class="girl-wrapper">
       <img id="boredGirl" class="girl-image" src="girl-bored.png" alt="Bored Goth Girl" />
       <img id="smileGirl" class="girl-image" src="girl-smile.png" alt="Smiling Goth Girl" />
       <div class="wallet-sign">
@@ -300,67 +277,90 @@
       </div>
     </div>
 
-    <div class="main-card fade-slide-in" id="intro">
-      <h2>Intro</h2>
-      <p>
-        Welcome to GothBuilt.fun — a one-of-a-kind experience where creativity and gothic aesthetics collide. This project lets you customize your own goth girl character with detailed features that reflect your style, mood, and imagination. From facial expressions to eye color, skin tone, makeup, and accessories, every element is designed to be adjustable — making each character unique and personal.
-      </p>
-      <p>
-        Our goal is to deliver a fun, interactive way to build dark, stylish avatars that feel alive on your screen. Whether you’re here for the aesthetic, the vibe, or just for fun, you’ll find that every option is crafted to match the spirit of goth culture while staying visually sleek and accessible.
-      </p>
-      <p>
-        In the near future, we’re planning to introduce <strong>AI-powered animated models</strong> — bringing your goth girl to life with smooth expressions, subtle movements, and intelligent reactions. Whether on your phone or desktop, your avatar will be more than just an image — it’ll respond, emote, and evolve with your inputs and style.
-      </p>
-      <p>
-        This is just the beginning. Join us as we continue building the ultimate gothic desktop companion — smart, stylish, and uniquely yours.
-      </p>
-    </div>
+    <div class="main-card">
+      <section class="intro-section fade-slide-in" id="intro">
+        <p>
+          Welcome to GothBuilt.fun — a one-of-a-kind experience where creativity and gothic aesthetics collide. This project lets you customize your own goth girl character with detailed features that reflect your style, mood, and imagination. From facial expressions to eye color, skin tone, makeup, and accessories, every element is designed to be adjustable — making each character unique and personal.<br><br>
+          Our goal is to deliver a fun, interactive way to build dark, stylish avatars that feel alive on your screen. Whether you’re here for the aesthetic, the vibe, or just for fun, you’ll find that every option is crafted to match the spirit of goth culture while staying visually sleek and accessible.<br><br>
+          In the near future, we’re planning to introduce <strong>AI-powered animated models</strong> — bringing your goth girl to life with smooth expressions, subtle movements, and intelligent reactions. Whether on your phone or desktop, your avatar will be more than just an image — it’ll respond, emote, and evolve with your inputs and style.<br><br>
+          This is just the beginning. Join us as we continue building the ultimate gothic desktop companion — smart, stylish, and uniquely yours.
+        </p>
+      </section>
 
-    <div class="main-card fade-slide-in" id="features">
-      <h2>Features & Customization</h2>
-      <p>
-        The heart of this project lies in its deep visual customization system. Our intuitive interface allows you to personalize your goth girl character with precise control over nearly every detail — offering a creative, hands-on experience.
-      </p>
-      <p>
-        You’ll explore these customization options:
-      </p>
-      <ul>
-        <li>Eye shape, color, and makeup</li>
-        <li>Skin tones and textures</li>
-        <li>Hairstyles and accessories</li>
-        <li>Facial expressions with subtle animation</li>
-        <li>Outfits and gothic-themed backgrounds</li>
-      </ul>
+      <section class="features-section fade-slide-in" id="features">
+        <h2>Features & Customization</h2>
+        <p>
+          The heart of this project lies in its deep visual customization system. Our intuitive interface allows you to personalize your goth girl character with precise control over nearly every detail — offering a creative, hands-on experience.
+          <br><br>
+          You’ll explore customization panels dedicated to distinct features such as:
+          <strong>eyes, clothing, skin tone, makeup, hair style, facial expressions, accessories, background themes, body mods, and more.</strong>
+          Each section provides a range of detailed options — whether it’s adjusting iris size and color, adding gothic chokers, or selecting moody makeup styles.
+          <br><br>
+          These panels are designed to be sleek, scrollable, and icon-driven — giving you quick access to every trait that defines your unique aesthetic. And as we expand, you'll also see new panel types and assets added regularly to reflect community suggestions and trends in goth fashion.
+          <br><br>
+          In the near future, we’re also working on integrating <strong>animated goth avatars powered by AI</strong>. These characters will blink, emote, and react to your inputs in real-time — blurring the line between digital art and living desktop companions.
+          <br><br>
+          Below are two sample customization panels currently in development, showcasing the eyes and clothing categories.
+        </p>
+      </section>
 
-      <div class="preview-images">
-        <img src="preview1.png" alt="Customization preview 1" />
-        <img src="preview2.png" alt="Customization preview 2" />
+      <div class="preview-images fade-slide-in">
+        <img src="eyes-panel.png" alt="Eyes Customization Panel" />
+        <img src="clothing-panel.png" alt="Clothing Customization Panel" />
       </div>
+
+      <section class="roadmap-section fade-slide-in" id="roadmap">
+        <h2>Roadmap</h2>
+        <p>
+          Phase 1: Project launch and initial avatar customization.<br>
+          Phase 2: Launch the $goth coin.<br>
+          Phase 3: Beta Version Deployment.<br>
+          Phase 4: Full Platform Launch.<br>
+          Phase 5: Release AI-powered animated goth avatars.<br>
+        </p>
+      </section>
     </div>
 
-    <div class="main-card fade-slide-in" id="roadmap">
-      <h2>Roadmap</h2>
-      <p>
-        This project is evolving quickly with plans to:
-      </p>
-      <ul>
-        <li>Launch the initial web-based customization tool</li>
-        <li>Integrate AI-driven facial animation</li>
-        <li>Create mobile-friendly versions</li>
-        <li>Enable NFT minting for unique custom goth girls</li>
-        <li>Develop desktop wallpaper and widget apps</li>
-        <li>Host community challenges and style contests</li>
-      </ul>
-      <p>
-        We invite our community to shape the future of GothBuilt.fun and bring their own ideas and feedback to the table.
-      </p>
-    </div>
+    <!-- Chibi goth girls -->
+    <img src="chibiintro.png" class="chibi-image chibi-intro" alt="Chibi Intro" />
+    <img src="chibifeatures.png" class="chibi-image chibi-features" alt="Chibi Features" />
+    <img src="chiniroadmap.png" class="chibi-image chibi-roadmap" alt="Chibi Roadmap" />
+  </div>
 
-    <div class="main-card fade-slide-in" id="contact">
-      <h2>Contact Us</h2>
-      <p>
-        Got questions? Suggestions? Want to collaborate or just say hi? Reach out anytime via:
-      </p>
-      <p>
-        <strong>Email:</strong> contact@gothbuilt.fun<br />
-        <strong>Discord:</strong> goth
+  <!-- Back to Top Button -->
+  <button id="backToTop" title="Back to Top">↑</button>
+
+  <script>
+    // Back to Top Button
+    const backToTopBtn = document.getElementById('backToTop');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backToTopBtn.style.display = 'block';
+      } else {
+        backToTopBtn.style.display = 'none';
+      }
+    });
+
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Scroll Animations using IntersectionObserver
+    const animatedElements = document.querySelectorAll('.fade-slide-in');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    animatedElements.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
