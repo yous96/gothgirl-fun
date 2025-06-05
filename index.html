@@ -9,54 +9,53 @@
       padding: 0;
       background-color: #D3D3D3;
       font-family: Arial, sans-serif;
-      padding-top: 65px; /* for sticky nav */
+      padding-top: 70px; /* for sticky nav */
       scroll-behavior: smooth;
     }
 
-    /* Sticky Navigation */
+    /* Stylish Navigation Bar */
     #site-nav {
       position: fixed;
-      top: 0;
+      top: 10px;
       left: 50%;
       transform: translateX(-50%);
-      background: #000;  /* black background */
+      background: linear-gradient(135deg, #111, #333);
       color: #eee;
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 30px;
-      padding: 15px 40px;
+      gap: 40px;
+      padding: 14px 50px;
       font-family: 'Cinzel', serif;
       z-index: 1000;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.8);
-      border-radius: 0 0 30px 30px; /* curved bottom corners */
+      border-radius: 35px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
       max-width: 900px;
       width: 90%;
+      user-select: none;
+      transition: box-shadow 0.3s ease;
     }
 
-    /* Push the Contact Us link to the right */
-    #contact-link {
-      margin-left: auto;
-      color: #eee;
-      font-weight: bold;
-      text-decoration: none;
-      font-size: 18px;
-      transition: color 0.3s;
-    }
-
-    #contact-link:hover {
-      color: #9acd32;
+    #site-nav:hover {
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.85);
     }
 
     #site-nav a {
       color: #eee;
       text-decoration: none;
-      font-size: 18px;
-      transition: color 0.3s;
+      font-size: 19px;
+      font-weight: 600;
+      padding: 6px 15px;
+      border-radius: 20px;
+      transition: background-color 0.3s, color 0.3s;
+      user-select: text;
     }
 
     #site-nav a:hover {
-      color: #9acd32;
+      background-color: #9acd32;
+      color: #111;
+      cursor: pointer;
+      box-shadow: 0 0 8px #9acd32;
     }
 
     .main-container {
@@ -198,6 +197,7 @@
     .chibi-roadmap {
       top: 4600px;
       left: 20px;
+      display: block; /* Make sure visible */
     }
 
     /* Back to Top Button */
@@ -227,18 +227,14 @@
     /* Responsive Design */
     @media (max-width: 768px) {
       #site-nav {
-        gap: 15px;
-        padding: 12px 20px;
-        width: 100%;
-        border-radius: 0 0 20px 20px;
+        gap: 20px;
+        padding: 12px 25px;
+        width: 95%;
       }
 
       #site-nav a {
         font-size: 16px;
-      }
-
-      #contact-link {
-        font-size: 16px;
+        padding: 5px 10px;
       }
 
       .main-card {
@@ -270,6 +266,26 @@
         max-width: 100%;
         height: auto;
       }
+
+      .chibi-image {
+        width: 200px;
+        opacity: 0.85;
+      }
+
+      .chibi-intro {
+        top: 800px;
+        left: 10px;
+      }
+
+      .chibi-features {
+        top: 1600px;
+        right: 10px;
+      }
+
+      .chibi-roadmap {
+        top: 4200px;
+        left: 10px;
+      }
     }
 
     /* Scroll Animations */
@@ -287,12 +303,12 @@
 </head>
 <body>
 
-  <!-- Sticky Navigation -->
+  <!-- Stylish Navigation Bar -->
   <nav id="site-nav">
     <a href="#intro">Intro</a>
     <a href="#features">Features</a>
     <a href="#roadmap">Roadmap</a>
-    <a href="mailto:contact@gothbuilt.fun" id="contact-link" target="_blank" rel="noopener noreferrer">Contact Us</a>
+    <a href="mailto:contact@gothbuilt.fun" target="_blank" rel="noopener noreferrer">Contact Us</a>
   </nav>
 
   <div class="main-container">
