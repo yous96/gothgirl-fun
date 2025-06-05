@@ -9,6 +9,34 @@
       padding: 0;
       background-color: #D3D3D3;
       font-family: Arial, sans-serif;
+      padding-top: 65px; /* for sticky nav */
+      scroll-behavior: smooth;
+    }
+
+    /* Sticky Navigation */
+    #site-nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      background: #2e1a47;
+      color: #eee;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 15px 0;
+      font-family: 'Cinzel', serif;
+      z-index: 1000;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.7);
+    }
+
+    #site-nav a {
+      color: #eee;
+      text-decoration: none;
+      font-size: 18px;
+      transition: color 0.3s;
+    }
+
+    #site-nav a:hover {
+      color: #9acd32;
     }
 
     .main-container {
@@ -151,9 +179,94 @@
       top: 4600px;
       left: 20px;
     }
+
+    /* Back to Top Button */
+    #backToTop {
+      position: fixed;
+      bottom: 40px;
+      right: 40px;
+      background: #2e1a47;
+      color: #eee;
+      border: none;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      font-size: 26px;
+      cursor: pointer;
+      display: none;
+      z-index: 1001;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      transition: background-color 0.3s;
+    }
+
+    #backToTop:hover {
+      background-color: #9acd32;
+      color: #2e1a47;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      #site-nav {
+        gap: 15px;
+        padding: 12px 0;
+      }
+
+      #site-nav a {
+        font-size: 16px;
+      }
+
+      .main-card {
+        padding: 40px 20px;
+        margin: 40px 15px 0 15px;
+      }
+
+      .girl-wrapper {
+        width: 90%;
+        height: auto;
+      }
+
+      .girl-image {
+        width: 100%;
+        height: auto;
+        position: relative;
+      }
+
+      .wallet-sign {
+        font-size: 18px;
+        top: auto;
+        left: 50%;
+        position: relative;
+        transform: translateX(-50%);
+        margin-top: 15px;
+      }
+
+      .preview-images img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+
+    /* Scroll Animations */
+    .fade-slide-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .fade-slide-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
   </style>
 </head>
 <body>
+
+  <!-- Sticky Navigation -->
+  <nav id="site-nav">
+    <a href="#intro">Intro</a>
+    <a href="#features">Features</a>
+    <a href="#roadmap">Roadmap</a>
+  </nav>
 
   <div class="main-container">
     <div class="girl-wrapper">
@@ -165,7 +278,7 @@
     </div>
 
     <div class="main-card">
-      <section class="intro-section">
+      <section class="intro-section fade-slide-in" id="intro">
         <p>
           Welcome to GothBuilt.fun — a one-of-a-kind experience where creativity and gothic aesthetics collide. This project lets you customize your own goth girl character with detailed features that reflect your style, mood, and imagination. From facial expressions to eye color, skin tone, makeup, and accessories, every element is designed to be adjustable — making each character unique and personal.<br><br>
           Our goal is to deliver a fun, interactive way to build dark, stylish avatars that feel alive on your screen. Whether you’re here for the aesthetic, the vibe, or just for fun, you’ll find that every option is crafted to match the spirit of goth culture while staying visually sleek and accessible.<br><br>
@@ -174,7 +287,7 @@
         </p>
       </section>
 
-      <section class="features-section">
+      <section class="features-section fade-slide-in" id="features">
         <h2>Features & Customization</h2>
         <p>
           The heart of this project lies in its deep visual customization system. Our intuitive interface allows you to personalize your goth girl character with precise control over nearly every detail — offering a creative, hands-on experience.
@@ -191,12 +304,12 @@
         </p>
       </section>
 
-      <div class="preview-images">
-        <img src="eyes-panel.png" alt="Eyes Customization Panel">
-        <img src="clothing-panel.png" alt="Clothing Customization Panel">
+      <div class="preview-images fade-slide-in">
+        <img src="eyes-panel.png" alt="Eyes Customization Panel" />
+        <img src="clothing-panel.png" alt="Clothing Customization Panel" />
       </div>
 
-      <section class="roadmap-section">
+      <section class="roadmap-section fade-slide-in" id="roadmap">
         <h2>Roadmap</h2>
         <p>
           Phase 1: Project launch and initial avatar customization.<br>
@@ -209,10 +322,45 @@
     </div>
 
     <!-- Chibi goth girls -->
-    <img src="chibiintro.png" class="chibi-image chibi-intro" alt="Chibi Intro">
-    <img src="chibifeatures.png" class="chibi-image chibi-features" alt="Chibi Features">
-    <img src="chiniroadmap.png" class="chibi-image chibi-roadmap" alt="Chibi Roadmap">
+    <img src="chibiintro.png" class="chibi-image chibi-intro" alt="Chibi Intro" />
+    <img src="chibifeatures.png" class="chibi-image chibi-features" alt="Chibi Features" />
+    <img src="chiniroadmap.png" class="chibi-image chibi-roadmap" alt="Chibi Roadmap" />
   </div>
 
+  <!-- Back to Top Button -->
+  <button id="backToTop" title="Back to Top">↑</button>
+
+  <script>
+    // Back to Top Button
+    const backToTopBtn = document.getElementById('backToTop');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        backToTopBtn.style.display = 'block';
+      } else {
+        backToTopBtn.style.display = 'none';
+      }
+    });
+
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Scroll Animations using IntersectionObserver
+    const animatedElements = document.querySelectorAll('.fade-slide-in');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+
+    animatedElements.forEach(el => observer.observe(el));
+  </script>
 </body>
 </html>
